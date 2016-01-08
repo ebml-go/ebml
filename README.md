@@ -1,7 +1,7 @@
-ebml-go
-=======
+ebml-go // ebml
+===============
 
-This is an implementation of an EBML decoder in the Go Programming Language.
+Package `ebml` provides an implementation of an EBML decoder in the Go Programming Language.
 
 EBML is short for Extensible Binary Meta Language.
 EBML specifies a binary and octet (byte) aligned format inspired by the principle of XML.
@@ -15,6 +15,10 @@ For a specification, see [http://ebml.sourceforge.net/specs/](http://ebml.source
 go get github.com/ebml-go/ebml
 ```
 
+### Usage
+
+See [WebM Parser](https://github.com/ebml-go/webm).
+
 ### LICENSE
 
-MIT
+The BSD 3-Clause License.
