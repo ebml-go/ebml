@@ -1,4 +1,4 @@
-// Copyright (c) 2012, Jorge Acereda Maciá. All rights reserved.  
+// Copyright (c) 2012, Jorge Acereda Maciá. All rights reserved.
 //
 // Use of this source code is governed by a BSD-style license that can
 // be found in the LICENSE file.
@@ -9,7 +9,7 @@
 // binary and octet (byte) aligned format inspired by the principle of
 // XML. EBML itself is a generalized description of the technique of
 // binary markup. Like XML, it is completely agnostic to any data that it
-// might contain. 
+// might contain.
 // For a specification, see http://ebml.sourceforge.net/specs/
 package ebml
 
@@ -97,6 +97,9 @@ func readSize(r io.Reader) (int64, error) {
 
 // Next returns the next child element in an element.
 func (e *Element) Next() (*Element, error) {
+	if e == nil {
+		return nil, io.EOF
+	}
 	if Verbose {
 		log.Println("next", e)
 	}
